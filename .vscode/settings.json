@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "/Users/vinai/Downloads/algs4.jar",
+        "algs4.jar"
+    ],
+    "java.project.sourcePaths": [
+        "."
+    ]
+}
