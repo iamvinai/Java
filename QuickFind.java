@@ -1,12 +1,11 @@
 public class QuickFind {
-
     public int arr[];
     public int numberOfGroups=0;
     public QuickFind(int n){
         arr = new int[n];
         for(int i=0;i<n;i++){
             arr[i]=i;
-        }
+        } 
         numberOfGroups = n;
     }
     public int find(int p){
