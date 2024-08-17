@@ -31,19 +31,26 @@ public class ArrayListMethods {
         System.out.println(arrS.lastIndexOf("Hi"));
         arrS.remove("Hello");
         
-        // Section 5: Removing elements greater than 5
-        ArrayList<Integer> arr4 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
-        arr4.removeIf(num -> num > 5);
+        // Section 5: Removing elements greater than 5 and also removing a particular Integer rather than based on indexing
+        ArrayList<Integer> arr4 = new ArrayList<Integer>(Arrays.asList(1, 20, 3, 4, 
+                                    5, 6, 7, 8, 9));
+        arr4.removeIf(num -> num > 8);
+        Integer i=20;
+        arr4.remove(i);
+        System.out.println("Arr4: "+arr4);
         
         // Section 6: Retaining specific elements
-        ArrayList<String> arrS2 = new ArrayList<String>(Arrays.asList("Naveen", "Naveen", "Praveen", "Virat", "Dhoni", "Anushka"));
+        ArrayList<String> arrS2 = new ArrayList<String>(Arrays.asList("Naveen", "Naveen",
+                                 "Praveen", "Virat", "Dhoni", "Anushka"));
         arrS2.retainAll(Collections.singleton("Naveen"));
+        System.out.println("arrS2: "+arrS2);
         
         // Section 7: Creating and printing sublist
         ArrayList<String> subList = new ArrayList<String>(arrS2.subList(0, arrS2.size()));
         System.out.println(subList.size());
 
-        ArrayList<String> convertToArray = new ArrayList<String>(Arrays.asList("Naveen", "Naveen", "Praveen", "Virat", "Dhoni", "Anushka"));
+        ArrayList<String> convertToArray = new ArrayList<String>(Arrays.asList("Naveen", 
+                                    "Naveen", "Praveen", "Virat", "Dhoni", "Anushka"));
         Object[] convertedArray = convertToArray.toArray();
         System.out.println(convertedArray.toString());
         for(Object obj:convertToArray){
