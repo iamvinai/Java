@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Collections;
+import java.util.ConcurrentModificationException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -28,12 +29,37 @@ public class MapComparison {
         System.out.println("SynchronizedMap: " + synchronizedMap);
         // SynchronizedMap is a synchronized wrapper around a HashMap
 
+        // Demonstrating ConcurrentModificationException
+        try {
+            // Synchronize on the synchronized map to ensure thread safety during iteration
+            synchronized (synchronizedMap) {
+                for (Map.Entry<String, String> entry : synchronizedMap.entrySet()) {
+                    if ("key1".equals(entry.getKey())) {
+                        synchronizedMap.put("key3", "value3"); // This will cause ConcurrentModificationException
+                    }
+                }
+            }
+        } catch (ConcurrentModificationException e) {
+            System.out.println("ConcurrentModificationException caught: " + e);
+        }
+        
         // ConcurrentHashMap example
         Map<String, String> concurrentMap = new ConcurrentHashMap<>();
         concurrentMap.put("key1", "value1");
         concurrentMap.put("key2", "value2");
         System.out.println("ConcurrentHashMap: " + concurrentMap);
         // ConcurrentHashMap is designed for concurrent access and is thread-safe
+
+        // Demonstrating ConcurrentModificationException
+        try {
+            for (Map.Entry<String, String> entry : hashMap.entrySet()) {
+                if ("key1".equals(entry.getKey())) {
+                    hashMap.put("key3", "value3"); // This will cause ConcurrentModificationException
+                }
+            }
+        } catch (ConcurrentModificationException e) {
+            System.out.println("ConcurrentModificationException caught: " + e);
+        }
 
         // Demonstrating differences in thread safety
         Runnable task = () -> {
