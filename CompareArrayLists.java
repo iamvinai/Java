@@ -31,6 +31,7 @@ public class CompareArrayLists {
         
         // Retain only the elements in lang1 that are also in lang2
         lang1.retainAll(lang2);
+        lang2.forEach(name -> {System.out.println(name);});
         
         // Print the common elements
         System.out.println(lang1); // Output: [C++, Python, Java]
