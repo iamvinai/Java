@@ -14,15 +14,16 @@ public class SetsDemo {
         System.out.println("HashSet:");
         iterateSet(hashSet);
 
+        // TreeSet Example
+        Set<String> treeSet = new TreeSet<>(Arrays.asList("Apple", "Banana", "Cherry"));
+        System.out.println("\nTreeSet:");
+        iterateSet(treeSet);
+
         // LinkedHashSet Example
         Set<String> linkedHashSet = new LinkedHashSet<>(Arrays.asList("Apple", "Banana", "Cherry"));
         System.out.println("\nLinkedHashSet:");
         iterateSet(linkedHashSet);
 
-        // TreeSet Example
-        Set<String> treeSet = new TreeSet<>(Arrays.asList("Apple", "Banana", "Cherry"));
-        System.out.println("\nTreeSet:");
-        iterateSet(treeSet);
 
         // EnumSet Example
         Set<Days> enumSet = EnumSet.of(Days.MONDAY, Days.WEDNESDAY, Days.FRIDAY);

@@ -42,8 +42,8 @@ public class HashMapComparision {
         ArrayList<String> arr1 = new ArrayList<String>(hmap1.values());
         ArrayList<String> arr2 = new ArrayList<String>(hmap3.values());
         ArrayList<String> arr3 = new ArrayList<String>(hmap2.values());
-        System.out.println(arr1.equals(arr2)); // Compare values of hmap1 and hmap3
-        System.out.println(arr1.equals(arr3)); // Compare values of hmap1 and hmap2
+        System.out.println(arr1+" "+arr2+" "+arr1.equals(arr2)); // Compare values of hmap1 and hmap3
+        System.out.println(arr1+" "+arr2+" "+arr1.equals(arr3)); // Compare values of hmap1 and hmap2
 
         // Compare values of HashMaps - duplicates values are allowed 
         HashSet<String> hset1 = new HashSet<String>(hmap1.values());

@@ -32,7 +32,7 @@ public class HashMapInitialization {
         // hmap1.put("Vinai", "Hi"); // Unsupported Operation Exception
 
         // Initializing an immutable map with multiple entries
-        hmap1 = Map.of("Vinai", "18", "Abdevilliers", "17");
+        hmap1 = Map.of("Vinai", "18", "Abdevilliers", "17"); //max limit of 10 values
         System.out.println(hmap1);
         // hmap1.put("Dhoni", "7"); // Unsupported Operation Exception
 

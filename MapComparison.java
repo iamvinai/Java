@@ -12,6 +12,7 @@ public class MapComparison {
         Map<String, String> hashMap = new HashMap<>();
         hashMap.put("key1", "value1");
         hashMap.put("key2", "value2");
+        hashMap.put(null,"HI");
         System.out.println("HashMap: " + hashMap);
         // HashMap is not synchronized and is not thread-safe
 
@@ -26,6 +27,7 @@ public class MapComparison {
         Map<String, String> synchronizedMap = Collections.synchronizedMap(new HashMap<>());
         synchronizedMap.put("key1", "value1");
         synchronizedMap.put("key2", "value2");
+        synchronizedMap.put(null,"HI");
         System.out.println("SynchronizedMap: " + synchronizedMap);
         // SynchronizedMap is a synchronized wrapper around a HashMap
 
@@ -47,7 +49,6 @@ public class MapComparison {
         Map<String, String> concurrentMap = new ConcurrentHashMap<>();
         concurrentMap.put("key1", "value1");
         concurrentMap.put("key2", "value2");
-        System.out.println("ConcurrentHashMap: " + concurrentMap);
         // ConcurrentHashMap is designed for concurrent access and is thread-safe
 
         // Demonstrating ConcurrentModificationException
