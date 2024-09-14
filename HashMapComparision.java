@@ -10,7 +10,8 @@ public class HashMapComparision {
         hmap1.put("India", "New Delhi");
         hmap1.put("USA", "Washington DC");
         hmap1.put("Japan", "Tokyo");
-
+        hmap1.put("China", "Beijing");
+        
         HashMap<String, String> hmap2 = new HashMap<String, String>();
         hmap2.put("India", "New Delhi");
         hmap2.put("Japan", "Tokyo");
