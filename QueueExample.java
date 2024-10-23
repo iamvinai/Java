@@ -17,6 +17,18 @@ public class QueueExample {
         String front = queue.remove();
         System.out.println("Removed element: " + front);
 
+        String frontPoll1 = queue.poll();
+        System.out.println("Removed element: " + frontPoll1);
+        String frontPoll2 = queue.poll();
+        System.out.println("Removed element: " + frontPoll2);
+
+        // Throws exception if queue is empty
+        String frontRemove = queue.remove();
+        System.out.println("Removed element: " + frontRemove); 
+        //Returns NULL if queue is empty
+        String frontPoll = queue.poll();
+        System.out.println("Removed element: " + frontPoll);
+
         // print the updated queue
         System.out.println("Queue after removal: " + queue);
 

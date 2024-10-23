@@ -14,7 +14,7 @@ public class CustomComparatorUsingPairsForJava {
 
         // Convert the map's entry set into a List of Map.Entry
         List<Map.Entry<String, Integer>> entryList = new ArrayList<>(map.entrySet());
-
+        //entryList.forEach(entry -> System.out.println(entry.getKey() + " -> " + entry.getValue()));
         // Create a comparator to sort by value first, then by key
         Comparator<Map.Entry<String, Integer>> valueThenKeyComparator = new Comparator<Map.Entry<String, Integer>>() {
             @Override
@@ -30,7 +30,8 @@ public class CustomComparatorUsingPairsForJava {
         };
 
         // Sort the list of entries using the combined comparator
-        entryList.sort(valueThenKeyComparator);
+        Collections.sort(entryList, valueThenKeyComparator);
+        //entryList.sort(valueThenKeyComparator);
 
         // Create a LinkedHashMap to maintain the sorted order
         Map<String, Integer> sortedMap = new LinkedHashMap<>();
