@@ -1,3 +1,12 @@
+/*This Java code defines a functional interface named `A`.
+ A functional interface is an interface that has exactly one abstract method. 
+ In this case, the abstract method is `add(int i, int j)` which takes two integers as input and returns an integer. 
+ This interface can be used as a lambda expression or method reference for any functional programming construct that expects a function that takes two integers and returns an integer.
+ */
+@FunctionalInterface
+interface A{
+    int add(int i,int j);
+}
 class Mobile{
     int id;
     String name;
@@ -22,6 +31,8 @@ class Mobile{
 }
 public class testJava{
     public static void main(String args[]){
+        A obj = (i,j)->i+j;
+        System.out.println(obj.add(2,3));
         String s="name";
         s+="vinai";
         try {
@@ -33,8 +44,8 @@ public class testJava{
         // Mobile.brand="Apple";
         // m.display();
         // Mobile.display1(m);
-        StringBuffer sbf=new StringBuffer(s);
-        StringBuilder sb=new StringBuilder(s);
+        StringBuffer sbf = new StringBuffer(s);
+        StringBuilder sb = new StringBuilder(s);
         long start=System.currentTimeMillis();
         for(int i=0;i<100000000;i++){
             sbf.setCharAt(0, 'v');
